@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,18 @@ namespace ReceiptTrackerWPF
         [Required]
         public decimal price { get; set; }
 
-
+        public ICollection<Item> items { get; set; }
     }
+
+    public class Item {
+        [Key]
+        [Range(0, int.MaxValue)]
+        public int id { get; set; }
+        [StringLength(100)]
+        public String name { get; set; }
+        [ForeignKey("Receipt")]
+        public int ReceiptId { get; set; }
+        public Receipt receipt { get; set; }
+}
+
 }

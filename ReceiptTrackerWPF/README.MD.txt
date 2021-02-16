@@ -24,3 +24,16 @@ need to add using system.linq; to use the .where funciton on a dbset
 TODO save a record
 TODO load a record to a grid
 TODO query a record
+
+
+
+change tracking
+when to make the query to list
+profile queries
+
+DTO to return custom combination of data
+
+unit of work apttern
+repsoitory pattern
+
+
