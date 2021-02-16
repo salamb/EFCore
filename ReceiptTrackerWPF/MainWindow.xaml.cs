@@ -25,7 +25,7 @@ namespace ReceiptTrackerWPF
         {
             store_array =new string [] { "walmart","target","aldi"};
            __random = new Random();
-        InitializeComponent();
+            InitializeComponent();
             dataView.CanUserAddRows = false;
             dataView.CanUserDeleteRows = false;
             __db = new RecieptData();

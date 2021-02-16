@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReceiptTrackerWPF;
 
 namespace ReceiptTrackerWPF.Migrations
 {
     [DbContext(typeof(RecieptData))]
-    partial class RecieptDataModelSnapshot : ModelSnapshot
+    [Migration("20210216030244_constraints")]
+    partial class constraints
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
