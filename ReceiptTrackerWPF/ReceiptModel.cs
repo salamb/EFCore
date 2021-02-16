@@ -12,7 +12,7 @@ namespace ReceiptTrackerWPF
     class RecieptData : DbContext
     {
         public DbSet<Receipt> receipts { get; set; }
-
+        public DbSet<Item> items { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlite("Data Source=blogging.db");
